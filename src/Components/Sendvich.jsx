@@ -1,33 +1,32 @@
 import React from "react";
-import Home from "./Home";
+import Home from "../Components/Home";
 import Footer from "./Footer";
 import { useEffect, useState, useMemo } from "react";
 
-const Lavash = () => {
-  const [lavash, setLavash] = useState([]);
+const Sendvich = () => {
+  const [sendvich, setSendvich] = useState([]);
 
   useEffect(() => {
     // get lavash
-    fetch("http://localhost:4000/getlavashs", {
+    fetch("http://localhost:4000/getsendvich", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })
       .then((res) => res.json())
       .then((data) => {
-        setLavash(data);
+        setSendvich(data);
       });
   }, []);
-
   return (
     <>
       <Home />
-      <div id="lavash">
+      <div id="sendvich">
         <div className="flex flexfor">
-          {lavash.map((l, index) => (
+          {sendvich.map((s, index) => (
             <div key={index} className="card">
-              <img src={l.lavash_img} alt="lavash" />
-              <p>{l.lavash_name}</p>
-              <h6>UZS {l.lavash_price}</h6>
+              <img src={s.sendvich_img} alt="lavash" />
+              <p>{s.sendvich_name}</p>
+              <h6>UZS {s.sendvich_price}</h6>
               <div className="flex">
                 <button>-</button>
                 <button className="plus">+</button>
@@ -41,4 +40,4 @@ const Lavash = () => {
   );
 };
 
-export default Lavash;
+export default Sendvich;

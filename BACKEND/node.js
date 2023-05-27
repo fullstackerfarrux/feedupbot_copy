@@ -3,6 +3,8 @@ import client from "./db/config.js";
 import cors from "cors";
 import dotenv from "dotenv";
 import TelegramBot from "node-telegram-bot-api";
+import lavashRoute from "./Routes/lavash.route.js";
+import get from "./Routes/get.route.js";
 
 const app = express();
 
@@ -58,6 +60,9 @@ bot.on("location", (msg) => {
     }
   );
 });
+
+app.use(lavashRoute);
+app.use(get);
 
 app.listen(port, () => {
   console.log(port);

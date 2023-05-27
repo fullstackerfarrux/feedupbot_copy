@@ -3,31 +3,31 @@ import Home from "./Home";
 import Footer from "./Footer";
 import { useEffect, useState, useMemo } from "react";
 
-const Lavash = () => {
-  const [lavash, setLavash] = useState([]);
+const Kombo = () => {
+  const [kombo, setKombo] = useState([]);
 
   useEffect(() => {
-    // get lavash
-    fetch("http://localhost:4000/getlavashs", {
+    // get kombo
+    fetch("http://localhost:4000/getkombo", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })
       .then((res) => res.json())
       .then((data) => {
-        setLavash(data);
+        setKombo(data);
       });
   }, []);
 
   return (
     <>
       <Home />
-      <div id="lavash">
+      <div id="kombo">
         <div className="flex flexfor">
-          {lavash.map((l, index) => (
+          {kombo.map((k, index) => (
             <div key={index} className="card">
-              <img src={l.lavash_img} alt="lavash" />
-              <p>{l.lavash_name}</p>
-              <h6>UZS {l.lavash_price}</h6>
+              <img src={k.kombo_img} alt="lavash" />
+              <p>{k.kombo_name}</p>
+              <h6>UZS {k.kombo_price}</h6>
               <div className="flex">
                 <button>-</button>
                 <button className="plus">+</button>
@@ -41,4 +41,4 @@ const Lavash = () => {
   );
 };
 
-export default Lavash;
+export default Kombo;

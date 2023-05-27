@@ -12,8 +12,7 @@ body {
 
 #root {
   width: 380px;
-  background-color: white;
-  height: 100vh;
+  background-color: #eee;
 }
 
 ul {
@@ -97,10 +96,223 @@ a {
 }
 
 #lavash {
+  .flexfor {
+    flex-wrap: wrap;
+  }
   .card {
     margin-left: 20px;
+    margin-bottom: 20px;
     width: 160px;
-    height: 280px;
     background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+
+    img {
+      width: 140px;
+      height: 100px;
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    p {
+      height: 50px;
+      font-style: 18px;
+      margin-top: 10px;
+    }
+
+    h6 {
+      color: orange;
+    }
+
+    button {
+      // margin-left: 40px;
+      width: 60px;
+      height: 30px;
+      border: none;
+      border-radius: 10px;
+      background-color: grey;
+      color: white;
+    }
+
+    .plus {
+      background-color: green;
+      margin-left: 20px;
+    }
+  }
+}
+#burger {
+  .flexfor {
+    flex-wrap: wrap;
+  }
+  .card {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 160px;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+
+    img {
+      width: 140px;
+      height: 100px;
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    p {
+      height: 50px;
+      font-style: 18px;
+      margin-top: 10px;
+    }
+
+    h6 {
+      color: orange;
+    }
+
+    button {
+      // margin-left: 40px;
+      width: 60px;
+      height: 30px;
+      border: none;
+      border-radius: 10px;
+      background-color: grey;
+      color: white;
+    }
+
+    .plus {
+      background-color: green;
+      margin-left: 20px;
+    }
+  }
+}
+
+#kombo {
+  .flexfor {
+    flex-wrap: wrap;
+  }
+  .card {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 160px;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+
+    img {
+      width: 140px;
+      height: 100px;
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    p {
+      height: 50px;
+      font-style: 18px;
+      margin-top: 10px;
+    }
+
+    h6 {
+      color: orange;
+    }
+
+    button {
+      // margin-left: 40px;
+      width: 60px;
+      height: 30px;
+      border: none;
+      border-radius: 10px;
+      background-color: grey;
+      color: white;
+    }
+
+    .plus {
+      background-color: green;
+      margin-left: 20px;
+    }
+  }
+}
+#sendvich {
+  .flexfor {
+    flex-wrap: wrap;
+  }
+  .card {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 160px;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+
+    img {
+      width: 140px;
+      height: 100px;
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    p {
+      height: 50px;
+      font-style: 18px;
+      margin-top: 10px;
+    }
+
+    h6 {
+      color: orange;
+    }
+
+    button {
+      // margin-left: 40px;
+      width: 60px;
+      height: 30px;
+      border: none;
+      border-radius: 10px;
+      background-color: grey;
+      color: white;
+    }
+
+    .plus {
+      background-color: green;
+      margin-left: 20px;
+    }
+  }
+}
+
+#footer {
+  width: 380px;
+  // height: 90px;
+  position: relative;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  background-color: white;
+  border-radius: 20px 20px 0 0;
+  padding: 15px;
+
+  .uzs {
+    color: orange;
+    font-size: 25px;
+  }
+  .all {
+    color: silver;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  p {
+    margin: 0;
+    color: orange;
+    font-size: 20px;
+  }
+  button {
+    position: relative;
+    left: 100px;
+    top: 20px;
+    right: 0;
+    width: 130px;
+    height: 40px;
+    background-color: orange;
+    border: none;
+    border-radius: 10px;
+    transform: scale(1.2);
+    color: white;
   }
 }
