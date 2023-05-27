@@ -4,7 +4,7 @@ import TelegramBot from "node-telegram-bot-api";
 dotenv.config();
 
 const bot = new TelegramBot(process.env.TelegrammApi, { polling: true });
-const webAppUrl = "https://ya.ru";
+const webAppUrl = "https://feedupbot.netlify.app/";
 
 bot.onText(/start/, (msg) => {
   console.log(msg);

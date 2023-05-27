@@ -1,4 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
+  color: black;
   background-color: black;
-  color: white;
+}
+
+#root {
+  width: 765px;
+  background-color: white;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 1350px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
 }
