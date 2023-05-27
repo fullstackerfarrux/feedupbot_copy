@@ -63,16 +63,36 @@ const Home = () => {
         </form>
       </div>
       <ul className="flex scrolforul">
-        <Link to={"/lavash"}>Лаваш</Link>
-        <li>Бургеры</li>
-        <li>Комбо</li>
-        <li>Сэндвич</li>
-        <li>Пицца</li>
-        <li>Напитки</li>
-        <li>Лонгеры</li>
-        <li>Снэки</li>
-        <li>Соусы</li>
-        <li>Вафли</li>
+        <Link to={"/"} className="lu">
+          Лаваш
+        </Link>
+        <Link to={"/burger"} className="li">
+          Бургеры
+        </Link>
+        <Link to={"/kombo"} className="li">
+          Комбо
+        </Link>
+        <Link to={"/sendvich"} className="li">
+          Сэндвич
+        </Link>
+        <Link to={"/pizza"} className="li">
+          Пицца
+        </Link>
+        <Link to={"/napitki"} className="li">
+          Напитки
+        </Link>
+        <Link to={"/longer"} className="li">
+          Лонгеры
+        </Link>
+        <Link to={"/sneki"} className="li">
+          Снэки
+        </Link>
+        <Link to={"/sous"} className="li">
+          Соусы
+        </Link>
+        <Link to={"/vafli"} className="li">
+          Вафли
+        </Link>
       </ul>
     </div>
   );

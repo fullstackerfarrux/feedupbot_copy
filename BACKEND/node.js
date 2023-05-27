@@ -1,7 +1,17 @@
+import express from "express";
+import client from "./db/config.js";
+import cors from "cors";
 import dotenv from "dotenv";
 import TelegramBot from "node-telegram-bot-api";
 
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
 dotenv.config();
+
+let port = process.env.PORT || 3030;
 
 const bot = new TelegramBot(process.env.TelegrammApi, { polling: true });
 const webAppUrl = "https://feedupbot.netlify.app/";
@@ -47,4 +57,8 @@ bot.on("location", (msg) => {
       }),
     }
   );
+});
+
+app.listen(port, () => {
+  console.log(port);
 });

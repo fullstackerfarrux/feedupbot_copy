@@ -73,10 +73,6 @@ a {
       border: none;
       border-radius: 10px;
       padding-right: 100px;
-
-      ::placeholder {
-        padding-left: 50px;
-      }
     }
   }
 
@@ -85,9 +81,26 @@ a {
 
     overflow-x: auto;
     overscroll-behavior-inline: contain;
-    li {
-      margin-right: 30px;
+    .li {
+      margin-left: 30px;
       margin-bottom: 10px;
+
+      &:hover {
+        color: orange;
+      }
     }
+
+    .lu:hover {
+      color: orange;
+    }
+  }
+}
+
+#lavash {
+  .card {
+    margin-left: 20px;
+    width: 160px;
+    height: 280px;
+    background-color: #eee;
   }
 }

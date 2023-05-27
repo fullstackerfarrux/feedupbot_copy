@@ -1,9 +1,9 @@
-import Home from "./Components/Home";
-import Lavash from "./Components/Lavash";
 import Loading from "./Components/Loading";
 import viteLogo from "/vite.svg";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import Burger from "./Components/Burger";
+import Lavash from "./Components/Lavash";
 
 function App() {
   const [isAlertVisible, setIsAlertVisible] = useState(false);
@@ -17,8 +17,8 @@ function App() {
       {/* LOADING */}
       {/* {!isAlertVisible ? <Loading /> : <h2>hi</h2>} */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/lavash" element={<Lavash />} />
+        <Route path="/" element={<Lavash />} />
+        <Route path="/burger" element={<Burger />} />
       </Routes>
     </>
   );
