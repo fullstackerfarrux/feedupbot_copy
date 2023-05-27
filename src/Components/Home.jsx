@@ -3,13 +3,14 @@ import assets from "../assets/feeduplogo.png";
 import firstImage from "../assets/firstImage.png";
 import secondImage from "../assets/secondImage.png";
 import thirdImage from "../assets/thirdImage.png";
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <div id="home">
       <div className="logo">
         <img src={assets} alt="" />
       </div>
-
       <div id="carouselExample" className="carousel slide mb-4">
         <div className="carousel-inner">
           <div className="carousel-item active">
@@ -50,9 +51,29 @@ const Home = () => {
 
       <div className="search">
         <form>
-          <input type="search" className="searchinput" />
+          <i
+            className=" searchicon fa-solid fa-magnifying-glass"
+            style={{ color: "#ffae00" }}
+          ></i>
+          <input
+            type="search"
+            className="searchinput shadow-lg p-3 mb-1 bg-body-tertiary rounded ps-5"
+            placeholder="Поиск продуктов..."
+          />
         </form>
       </div>
+      <ul className="flex scrolforul">
+        <Link to={"/lavash"}>Лаваш</Link>
+        <li>Бургеры</li>
+        <li>Комбо</li>
+        <li>Сэндвич</li>
+        <li>Пицца</li>
+        <li>Напитки</li>
+        <li>Лонгеры</li>
+        <li>Снэки</li>
+        <li>Соусы</li>
+        <li>Вафли</li>
+      </ul>
     </div>
   );
 };

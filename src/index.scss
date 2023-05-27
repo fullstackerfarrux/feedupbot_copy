@@ -35,7 +35,7 @@ a {
 }
 
 #loading {
-  width: 500px;
+  width: 380px;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -57,12 +57,37 @@ a {
   }
 
   .search {
+    position: relative;
+    .searchicon {
+      font-size: 16px;
+    }
+    i {
+      position: absolute;
+      left: 30px;
+      top: 15px;
+    }
     .searchinput {
-      width: 300px;
+      width: 320px;
       margin-left: 10px;
       height: 45px;
-      // border: none;
+      border: none;
       border-radius: 10px;
+      padding-right: 100px;
+
+      ::placeholder {
+        padding-left: 50px;
+      }
+    }
+  }
+
+  ul {
+    padding: 10px;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    li {
+      margin-right: 30px;
+      margin-bottom: 10px;
     }
   }
 }
