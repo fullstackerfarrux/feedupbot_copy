@@ -4,8 +4,24 @@ import firstImage from "../assets/firstImage.png";
 import secondImage from "../assets/secondImage.png";
 import thirdImage from "../assets/thirdImage.png";
 import { Link } from "react-router-dom";
+// import { useEffect, useState, useMemo } from "react";
 
 const Home = () => {
+  // const getBurger = () => {
+  //   const [burger, setBurger] = useState([]);
+
+  //   useEffect(() => {
+  //     // get burger
+  //     fetch("http://localhost:4000/getburger", {
+  //       method: "GET",
+  //       headers: { "Content-Type": "application/json" },
+  //     })
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         setBurger(data);
+  //       });
+  //   }, []);
+  // };
   return (
     <div id="home">
       <div className="logo">
@@ -66,7 +82,7 @@ const Home = () => {
         <Link to={"/"} className="lu">
           Лаваш
         </Link>
-        <Link to={"/burger"} className="li">
+        <Link onClick={() => getBurger()} to={"/burger"} className="li">
           Бургеры
         </Link>
         <Link to={"/kombo"} className="li">
