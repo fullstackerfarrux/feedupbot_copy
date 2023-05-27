@@ -1,19 +1,21 @@
+import Home from "./Components/Home";
+import Loading from "./Components/Loading";
 import viteLogo from "/vite.svg";
+import { useState } from "react";
 
 function App() {
+  const [isAlertVisible, setIsAlertVisible] = useState(false);
+
+  setTimeout(() => {
+    setIsAlertVisible(true);
+  }, 3000);
+
   return (
     <>
-      <div className="flex">
-        <button class="loading btn btn-primary" type="button" disabled>
-          <span
-            class="spinner-border spinner-border-sm"
-            role="status"
-            aria-hidden="true"
-          ></span>
-          Loading...
-        </button>
-        <h1>hello my name is hello but i like my na</h1>
-      </div>
+      {/* LOADING */}
+      {/* {!isAlertVisible ? <Loading /> : <h2>hi</h2>} */}
+
+      <Home />
     </>
   );
 }

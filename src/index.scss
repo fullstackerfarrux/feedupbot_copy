@@ -11,7 +11,7 @@ body {
 }
 
 #root {
-  width: 765px;
+  width: 500px;
   background-color: white;
   height: 100vh;
 }
@@ -32,4 +32,37 @@ a {
 
 .flex {
   display: flex;
+}
+
+#loading {
+  width: 500px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1.5);
+}
+
+#home {
+  padding: 15px;
+  .logo {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 10px;
+    img {
+      width: 120px;
+      height: 65px;
+      border-radius: 10px;
+    }
+  }
+
+  .search {
+    .searchinput {
+      width: 400px;
+      margin-left: 30px;
+      height: 45px;
+      // border: none;
+      border-radius: 10px;
+    }
+  }
 }
