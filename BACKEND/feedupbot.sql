@@ -139,15 +139,15 @@ values ('Донар', 'https://feedup-api.itsone.uz/uploads/photo-1667381645015.
 
 -- sneki
 
-drop table if exists longer;
-create table longer(
+drop table if exists sneki;
+create table sneki(
     id serial unique,
-    longer_name varchar not null,
-    longer_img varchar not null,
-    longer_price varchar not null
+    sneki_name varchar not null,
+    sneki_img varchar not null,
+    sneki_price varchar not null
 );
 
-insert into longer(longer_name, longer_img, longer_price)
+insert into sneki(sneki_name, sneki_img, sneki_price)
 values ('Сырные кубики', 'https://feedup-api.itsone.uz/uploads/photo-1667384545140.jpg', '19 000,00'),
 ('Картофель по-деревенски', 'https://feedup-api.itsone.uz/uploads/photo-1667384447240.jpg', '15 000,00'),
 ('Чикен Стик', 'https://feedup-api.itsone.uz/uploads/photo-1667384579466.jpg', '20 000,00'),
@@ -165,10 +165,10 @@ create table sous(
 );
 
 insert into sous(sous_name, sous_img, sous_price)
-values ('Сырный соус', '', '2 000,00'),
-('Cоус чили', '', '2 000,00'),
-('Cоус майонез', '', '2 000,00'),
-('Кетчуп соус', '', '2 000,00');
+values ('Сырный соус', 'https://feedup-api.itsone.uz/uploads/photo-1667382421230.jpg', '2 000,00'),
+('Cоус чили', 'https://feedup-api.itsone.uz/uploads/photo-1667382375725.jpg', '2 000,00'),
+('Cоус майонез', 'https://feedup-api.itsone.uz/uploads/photo-1667382315049.jpg', '2 000,00'),
+('Кетчуп соус', 'https://feedup-api.itsone.uz/uploads/photo-1667382250863.jpg', '2 000,00');
 
 
 
