@@ -1,4 +1,4 @@
-import express from "express";
+import express, { json } from "express";
 import client from "./db/config.js";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -18,7 +18,7 @@ let port = process.env.PORT || 3030;
 const bot = new TelegramBot(process.env.TelegrammApi, { polling: true });
 const webAppUrl = "https://feedupbot.netlify.app/";
 
-bot.onText(/start/, (msg) => {
+bot.onText(/start/, async (msg) => {
   console.log(msg);
 
   bot.sendMessage(
@@ -36,7 +36,6 @@ Mahsulotlarni 🥄 Menu bo'limidan tanlang`,
     }
   );
 });
-
 bot.on("contact", (msg) => {
   bot.sendMessage(msg.chat.id, `Пожалуйста отправьте геопозицию`, {
     reply_markup: JSON.stringify({
@@ -59,6 +58,40 @@ bot.on("location", (msg) => {
       }),
     }
   );
+});
+bot.on("message", async (msg) => {
+  if (msg?.web_app_data?.data) {
+    try {
+      const data = JSON.parse(msg?.web_app_data?.data);
+
+      await bot.sendMessage(
+        msg.chat.id,
+        `Sizning zakaz:
+       ${data.map((p) => {
+         return p.name;
+       })}`
+      );
+      await bot.sendMessage(msg.chat.id, "Zakaz qabul qilindi");
+    } catch (error) {
+      console.log(error);
+    }
+  }
+});
+
+bot.on("message", async (msg) => {
+  console.log(msg);
+  if (msg?.web_app_data?.data) {
+    await bot.sendMessage(
+      msg.chat.id,
+      `Buyurtma bersh uchun mahsulotlarni menu dan tanlang`,
+      {
+        reply_markup: JSON.stringify({
+          keyboard: [[{ text: "Отправить контакт", request_contact: true }]],
+          resize_keyboard: true,
+        }),
+      }
+    );
+  }
 });
 
 app.use(lavashRoute);
